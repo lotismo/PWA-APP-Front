@@ -1,0 +1,19 @@
+
+<h1>My profile</h1>
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<div class="container">
+    <p>{{user?.name}}</p>
+    <p>{{user?.email}}</p>
+</div>
+
+<div class="container">
+
+    <button class="btn btn-success" (click)="updateUser(user.id)">update user</button>
+    <button class="btn btn-warning" (click)="deleteUser(user.id)">delete user</button>
+</div>
+
+<div class="container">
+        <button (click)="createNewUser()" class="btn btn-success">Create User</button>
+</div>

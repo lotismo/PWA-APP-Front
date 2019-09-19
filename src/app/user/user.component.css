@@ -1,0 +1,21 @@
+.ng-invalid:not(form){
+    border-left: 5px solid red;
+}
+
+.container{
+    width : 50%;
+}
+
+.avatar{
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.img-container{
+    width: 100%;
+    text-align: center;
+}
+
+.form-group label{
+    font-weight: bold;
+}

@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Login to API</h1>
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+    <div>
+        user name : <input type="text" name="username" #usernameInput>
+        password : <input type="password" name="password" #passwordInput>
+
+        <button (click)="handleAuthLogin(usernameInput,passwordInput)" class="btn btn-success">login</button>
+    </div>
+</div>

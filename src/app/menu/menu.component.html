@@ -1,0 +1,13 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-brand">SimpleApp</div>
+        <ul class="navbar-nav">
+            <li><a *ngIf="auth.isUserLoggedIn()" routerLink="/users" class="nav-link">users</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!auth.isUserLoggedIn()" routerLink="/login" class="nav-link">login</a></li>
+            <li><a *ngIf="auth.isUserLoggedIn()" routerLink="/logout" class="nav-link">logout</a></li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,30 @@
+
+<h1>Users List</h1>
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td><button class="btn btn-success" (click)="goToUser(user.id)">edit</button></td>
+                <td><button class="btn btn-warning" (click)="deleteUser(user.id)">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success" (click)="createNewUser()">create a user</button>
+</div>
+
+

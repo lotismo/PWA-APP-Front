@@ -1,0 +1,29 @@
+<h1>User Update</h1>
+
+<div class="container">
+
+    <div class="alert alert-warning" *ngIf="todoForm.dirty && todoForm.invalid">Enter valid Values(fields must be 5
+        chars or higher)</div>
+
+    <form action="" (ngSubmit)="!todoForm.invalid && saveUser()" #todoForm="ngForm">
+        <div class="img-container">
+            <img  [src]="imgsrc" class="img-responsive avatar" width="100" height="100"
+                alt="avatar">
+        </div>
+        <div class="img-container">
+                <input #imageInput (change)="onSelectFile($event)" type="file" accept="image/" width="20">
+        </div>
+        <fieldset class="form-group">
+            <label>Username:</label>
+            <input type="text" [(ngModel)]="user.name" class="form-control" name="name" required="required"
+                minlength="5">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Email:</label>
+            <input type="text" [(ngModel)]="user.email" class="form-control" name="email" required="required"
+                minlength="5" type="email">
+        </fieldset>
+
+        <button class="btn btn-success" type="submit">save</button>
+    </form>
+</div>
