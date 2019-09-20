@@ -12,5 +12,5 @@ The tricky part is that service workers only support the chaching of GET request
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
-to see the Service Worker in action you need to run  `ng build --prod`. 
-And start the app with `http-server -p 8081 dist/challenge`, here we lunch na http server on port 8081 because thats the port we are autorizing in our backend.
+To see the Service Worker in action you need to run a production server first you need to build with `ng build --prod`. 
+And start the app with `http-server -p 8081 dist/challenge`, here we lunch na http server on port 8081 because thats the port we are autorizing in our backend. and go see the magic happen at http://localhost:8081/index.html,  you need to load the link a couple of times to let the service worker do its work(store the cache ...).
